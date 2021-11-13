@@ -1,18 +1,42 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>Stormy</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet"> 
-</head>
-<body>
-	<div class="container">
-		<img src="banner.jpg" alt="San Francisco Skyline" style="width:100%;">
-		<div class="centered">
-			<h1>Stórmy</h1>
-			<p><a href="mailto:me@imstormy.com">me@imstormy.com</a></p>
+	<head>
+		<title>Torpey-Aldag</title>
+		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Hey, I'm Ted.</h1>
+						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+						<nav>
+							<ul>
+								<li><a href="mailto:ted@torpeyaldag.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+					</footer>
+
+			</div>
 		</div>
-	</div>
-</body>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
 </html>
