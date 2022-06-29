@@ -19,9 +19,9 @@ function myFunction() {
   }
 }
 
-//Set today - default start date
 var todayDate = new Date();
-document.getElementById("startDate").value = todayDate.toISOString().slice(0, 10);
+
+
 // date maths
 function daysAdd(daysNum, fromDate) {
   var startDate = new Date(fromDate);
