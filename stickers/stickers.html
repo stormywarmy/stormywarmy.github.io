@@ -19,7 +19,27 @@
 	font-size: 96px;
 	color: black;
 	position: absolute;
-	top: 60%;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Centered text */
+.centered1 {
+	font-family: 'Comfortaa', cursive;
+	font-size: 48px;
+	color: black;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Centered text */
+.centered2 {
+	font-family: 'Comfortaa', cursive;
+	font-size: 18px;
+	color: black;
+	position: absolute;
+	top: 83%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 } 
@@ -28,8 +48,10 @@
 </head>
 <body>
 	<div class="container" id="daydotContainer">
-		<img id="imageBox" class="imageBox" src="monday.png" alt="Day dot" style="width:20%;">
+		<img id="imageBox" class="imageBox" src="monday.png" alt="Day dot" style="width:20%;"><!--12%!-->
 		<div class="centered"><p id="replace-me">12</p></div>
+		<div class="centered1"><p id="replace-me1">September</p></div>
+		<div class="centered2"><p id="replace-me2">2022</p></div>
 	</div>
 
 	<button onclick="document.getElementById('replace-me').innerHTML = '14'">14</button>
