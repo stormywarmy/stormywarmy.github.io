@@ -77,7 +77,7 @@ function setFreeDays() {
   var newDate = newDate.toDateString();
   var startDate = startDate.toDateString();
   document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
-  }
+}
 // Add weeks num from input
 function setFreeWeeks() {
   var startDate = new Date(document.getElementById("startDate").value);
