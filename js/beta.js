@@ -68,8 +68,12 @@ function setDays(daysNum) {
 function setFreeDays() {
   var startDate = new Date(document.getElementById("startDate").value);
   var startDate1 = startDate.toISOString().slice(0, 10);
-  var daysNum = parseInt(1);
-  //var daysNum = parseInt(document.getElementById("dataVal").value);
+  if document.getElementById("dataVal").value = isNaN {
+    daysNum = parseInt(1);
+    else {
+      var daysNum = parseInt(document.getElementById("dataVal").value);
+    }
+  }
   var newDate = daysAdd(daysNum - 1, startDate);
   var newDate = newDate.toDateString();
   var startDate = startDate.toDateString();
