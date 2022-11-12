@@ -78,8 +78,12 @@ function setFreeDays() {
   console.log(typeof daysNum);
   console.log(daysNum);
   var newDate = newDate.toDateString();
+  cosnole.log(newDate);
   var startDate = startDate.toDateString();
+  console.log(startDate);
   document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
+  console.log(daysNum);
+  console.log(daysNum+startDate1+newDate);
 }
 // Add weeks num from input
 function setFreeWeeks() {
