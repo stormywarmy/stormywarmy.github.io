@@ -73,7 +73,7 @@ function setFreeDays() {
   var newDate = daysAdd(daysNum - 1, startDate);
   console.log(daysNum)
   if (Number.isNaN(daysNum)) {
-    daysNum = 1;
+    var daysNum = parseInt(1);
   }
   console.log(typeof daysNum);
   console.log(daysNum);
