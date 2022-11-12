@@ -78,7 +78,7 @@ function setFreeDays() {
   console.log(typeof daysNum);
   console.log(daysNum);
   var newDate = newDate.toDateString();
-  cosnole.log(newDate);
+  console.log(newDate);
   var startDate = startDate.toDateString();
   console.log(startDate);
   document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
