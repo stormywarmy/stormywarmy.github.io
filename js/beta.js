@@ -20,7 +20,7 @@ function myFunction() {
 }
 
 var todayDate = new Date();
-var DaysNum = 45;
+var daysNum = 45;
 
 // date maths
 function daysAdd(daysNum, fromDate) {
