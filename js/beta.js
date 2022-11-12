@@ -72,6 +72,10 @@ function setFreeDays() {
   console.log(daysNum)
   var newDate = daysAdd(daysNum - 1, startDate);
   console.log(daysNum)
+  if (Number.isNaN(daysNum)) {
+    daysNum = "1";
+  }
+  console.log(daysNum)
   var newDate = newDate.toDateString();
   var startDate = startDate.toDateString();
   document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
