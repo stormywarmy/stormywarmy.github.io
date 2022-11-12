@@ -70,9 +70,9 @@ function setFreeDays() {
   var startDate1 = startDate.toISOString().slice(0, 10);
   if (isNaN(document.getElementById("dataVal").value)) {
     daysNum = parseInt(1);
-    } else {
-        daysNum = parseInt(document.getElementById("dataVal").value);
-      }
+  } else {
+    daysNum = parseInt(document.getElementById("dataVal").value);
+  }
   var newDate = daysAdd(daysNum - 1, startDate);
   var newDate = newDate.toDateString();
   var startDate = startDate.toDateString();
