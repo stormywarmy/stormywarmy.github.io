@@ -20,7 +20,7 @@ function myFunction() {
 }
 
 var todayDate = new Date();
-
+var DaysNum = 45;
 
 // date maths
 function daysAdd(daysNum, fromDate) {
@@ -70,9 +70,6 @@ function setFreeDays() {
   var startDate = new Date(document.getElementById("startDate").value);
   var startDate1 = startDate.toISOString().slice(0, 10);
   var daysNum = parseInt(document.getElementById("dataVal").value);
-  if (daysNum) = "" {
-    var daysNum = document.getElementById('dataVal').placeholder;
-  }
   var newDate = daysAdd(daysNum - 1, startDate);
   var newDate = newDate.toDateString();
   var startDate = startDate.toDateString();
