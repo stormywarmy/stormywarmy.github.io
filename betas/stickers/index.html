@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="ico" sizes="16x16" href="images/favicon.ico">
+	<title>Daydot Helper</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/javascript.js"></script>
+	<script>
+		$(document).ready(function() {
+			document.getElementById("today").click();
+		});	
+	</script>
+</head>
+<body>
+	<center>
+		<h1>Daydot Helper</h1>
+		<p>By <a class="byStormy" href="mailto:me@imstormy.com?subject=Daydot Helper">St&#243;rmy</a></p>
+		<hr>
+		<div>
+			<p>Start Date:</p>
+			<input class="button" name="setTodayBtn" type="button" id="today" onClick="setTodayDate()" value="Today" />
+			<input class="button" name="setTomorrowBtn" type="button" id="today" onClick="setTomorrowDate()" value="Tomorrow" /> &nbsp;
+			<input class="button" type="date" id="startDate" name="startDate" value="">
+			<p>How many days until expiration:</p>
+			<input id="3days" class="button" type="button" name="1dayBtn" value="3 days" onClick="setDays(3)" />
+			<input id="4days" class="button" type="button" name="1dayBtn" value="4 days" onClick="setDays(4)" />
+			<input id="5days" class="button" type="button" name="1dayBtn" value="5 days" onClick="setDays(5)" />
+			<input id="7days" class="button" type="button" name="1dayBtn" value="7 days" onClick="setDays(7)" />
+			<p></p>
+			<input id="4weeks" class="button" type="button" name="1weekBtn" value="4 weeks" onClick="setWeeks(4)" />
+			<!--<input type="button" name="1dayBtn" value="30 days" onClick="setDays(30)"/>-->
+			<input id="1month" class="button" type="button" name="1monthBtn" value="1 month" onClick="setMonths(1)" />
+			<!--<input type="button" name="1dayBtn" value="45 days" onClick="setDays(45)"/>-->
+			<input id="12weeks" class="button" type="button" name="1weekBtn" value="12 weeks" onClick="setWeeks(12)" />
+			<input id="3months" class="button" type="button" name="1monthBtn" value="3 months" onClick="setMonths(3)" />
+			<p>Specific days/months until expiration:</p>
+			<input class="button" id="dataVal" name="dataVal" type="number" placeholder="45">
+			<input class="button" type="button" name="dataDayBtn" value="days" onClick="setFreeDays()" />
+			<input class="button" type="button" name="dataWeekBtn" value="weeks" onClick="setFreeWeeks()" />
+			<input class="button" type="button" name="dataMonthBtn" value="months" onClick="setFreeMonths()" />
+		</div>
+		<div id="result"></div>
+		<button onclick="document.getElementById('replace-me').innerHTML = '14'">14</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '12'">12</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '30'">30</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '26'">26</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '8'">8</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '5'">5</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '29'">29</button>
+		<button onclick="document.getElementById('replace-me').innerHTML = '7'">7</button>
+		<br>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/monday.png)'">Monday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/tuesday.png)'">Tuesday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/wednesday.png)'">Wednesday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/thursday.png)'">Thursday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/friday.png)'">Friday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/saturday.png)'">Saturday</button>
+		<button onclick="document.getElementById('daydotContainer').style.backgroundImage='url(images/sunday.png)'">Sunday</button>
+		<br>
+		<div class="container" id="daydotContainer">
+			<div style="margin-top: 23%;">
+				<p class="centered1" id="replace-me1">September</p>
+				<p class="centered" id="replace-me">12</p>
+				<p class="centered2" id="replace-me2">2022</p>
+			</div>
+		</div>
+		&nbsp;
+		<hr>
+		<p>I have removed the menu as it is outdated. If anyone would like it updated, please email me the menu at: <a href="mailto:me@imstormy.com?subject=Daydot Helper">me@imstormy.com</a></p>
+	</hr>
+</center>
+<center>
+	<hr>
+	<p>Maintained by <a class="byStormy" href="mailto:me@imstormy.com?subject=Daydot Helper">St&#243;rmy O'Connor.</a></p>
+</hr>
+<p>My Favourites:<br>Marine Point <a class="byStormy" href="../../index.html">&#8226;</a> Ellesmere Port DT</p>
+</center>
+</body>
+</html>
