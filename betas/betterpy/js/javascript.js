@@ -20,7 +20,7 @@ function myFunction() {
 }
 
 var todayDate = new Date();
-const timeUnit = ["days", "weeks", "months"];
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
 // date maths
@@ -46,28 +46,74 @@ function setCurrentDate(daysNum) {
 function setDates(daysNum) {
   var startDate = document.getElementById("startDate").value;
   var newDate = daysAdd(daysNum, startDate);
-  var newDate = newDate.toDateString();
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " " + timeUnit + " from " + startDate + " is " + "<br><h2>" + newDate + "</h2>";
+  //gets the weekday e.g. Mon, Tue
+  let weekDay = weekday[newDate.getDay()];
+  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
+  var theDayMonth = newDate.toISOString().slice(5, 10);
+  //gets the month from theDayMonth variable
+  var theMonth = theDayMonth.slice(3);
+  //gets the day from theDayMonth variable
+  var theDay = theDayMonth.slice(0, 2);
+  //gets the year
+  var theYear = newDate.toISOString().slice(0, 4);
+  //document.getElementById("result").innerHTML += "<p>" + daysNum + " " + timeUnit + " from " + startDate + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
 }
 
 function setMonths(daysNum) {
   var startDate = document.getElementById("startDate").value;
+  var startYear = startDate.slice(0, 4);
+  var startMonth = startDate.slice(5, 7);
+  var startDay = startDate.slice(8, 10);
+  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
   var newDate = monthsAdd(daysNum, startDate);
-  var newDate = newDate.toDateString();
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " Months from " + startDate + " is " + "<br><h2>" + newDate + "</h2>";
+  let weekDay = weekday[newDate.getDay()];
+  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
+  var theDayMonth = newDate.toISOString().slice(5, 10);
+  //gets the month from theDayMonth variable
+  var theDay = theDayMonth.slice(3);
+  //gets the day from theDayMonth variable
+  var theMonth = theDayMonth.slice(0, 2);
+  //gets the year
+  var theYear = newDate.toISOString().slice(0, 4);
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Months from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
 }
 
 function setWeeks(daysNum) {
   var startDate = document.getElementById("startDate").value;
+  var startYear = startDate.slice(0, 4);
+  var startMonth = startDate.slice(5, 7);
+  var startDay = startDate.slice(8, 10);
+  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
   var newDate = daysAdd(daysNum * 7, startDate);
-  var newDate = newDate.toDateString();
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " Weeks from " + startDate + " is " + "<br><h2>"  + newDate + "</h2>";
+  let weekDay = weekday[newDate.getDay()];
+  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
+  var theDayMonth = newDate.toISOString().slice(5, 10);
+  //gets the month from theDayMonth variable
+  var theDay = theDayMonth.slice(3);
+  //gets the day from theDayMonth variable
+  var theMonth = theDayMonth.slice(0, 2);
+  //gets the year
+  var theYear = newDate.toISOString().slice(0, 4);
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Weeks from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
 }
 
 function setDays(daysNum) {
   var startDate = document.getElementById("startDate").value;
+  var startYear = startDate.slice(0, 4);
+  var startMonth = startDate.slice(5, 7);
+  var startDay = startDate.slice(8, 10);
+  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
   var newDate = daysAdd(daysNum, startDate);
-  var newDate = newDate.toDateString();
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate + " is " + "<br><h2>" + newDate + "</h2>";
+  //gets the weekday e.g. Mon, Tue
+  let weekDay = weekday[newDate.getDay()];
+  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
+  var theDayMonth = newDate.toISOString().slice(5, 10);
+  //gets the month from theDayMonth variable
+  var theDay = theDayMonth.slice(3);
+  //gets the day from theDayMonth variable
+  var theMonth = theDayMonth.slice(0, 2);
+  //gets the year
+  var theYear = newDate.toISOString().slice(0, 4);
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " " + " Days from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
 }
-$('p').html($('p').html().replace(/\|/g, ''));
+//$('p').html($('p').html().replace(/\|/g, ''));
