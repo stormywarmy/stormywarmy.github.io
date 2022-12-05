@@ -74,3 +74,54 @@ a.byStormy {
 #result {
   font-size: 1.3em;
 }
+
+#myTable {
+  border-collapse: collapse;
+  /* Collapse borders */
+  width: 100%;
+  /* Full-width */
+  font-size: 18px;
+  /* Increase font-size */
+}
+
+.tableFixHead {
+  overflow-y: auto;
+  height: 400px;
+}
+
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+
+#myTable th {
+  background: #eee;
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  /* Left-align text */
+  padding: 12px;
+  /* Add padding */
+}
+
+#myTable td {
+  background-color: hsla(0, 50%, 80%, 0.3);
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #000;
+}
+
+#myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+#myTable tr.header {
+  background-color: rgba(0, 0, 0, 0.2);
+}
