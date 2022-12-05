@@ -1,14 +1,3 @@
-var close = document.getElementsByClassName("closebtn");
-var x;
-
-for (x = 0; x < close.length; x++) {
-  close[x].onclick = function(){
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
-  }
-}
-
 function myFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
