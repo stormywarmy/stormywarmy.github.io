@@ -1,8 +1,8 @@
 var close = document.getElementsByClassName("closebtn");
-var imsg;
+var x;
 
-for (imsg = 0; imsg < close.length; imsg++) {
-  close[imsg].onclick = function(){
+for (x = 0; x < close.length; x++) {
+  close[x].onclick = function(){
     var div = this.parentElement;
     div.style.opacity = "0";
     setTimeout(function(){ div.style.display = "none"; }, 600);
