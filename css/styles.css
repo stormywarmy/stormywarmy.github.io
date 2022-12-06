@@ -78,9 +78,9 @@ a.byStormy {
 #myTable {
   border-collapse: collapse;
   /* Collapse borders */
-  width: 100%;
+  width: 95%;
   /* Full-width */
-  font-size: 18px;
+  font-size: 16px;
   /* Increase font-size */
 }
 
