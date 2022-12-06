@@ -128,14 +128,12 @@ a.byStormy {
 
 .alert {
   padding: 20px;
-  background-color: #f44336;
+  background-color: #2196F3;
   color: white;
   opacity: 1;
   transition: opacity 0.6s;
   margin-bottom: 15px;
 }
-
-.alert.info {background-color: #2196F3;}
 
 .closebtn {
   margin-left: 15px;
