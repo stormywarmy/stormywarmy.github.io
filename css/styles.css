@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&amp;display=swap');
 @charset "utf-8";
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    body {
+      color: black;
+      margin: 10px;
+      padding: 5px;
+      background-image: url("../images/pattern.jpg");
+      background-size: contain;
+    }
+}
+
 body {
   color: black;
   margin: 10px;
