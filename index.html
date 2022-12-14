@@ -41,7 +41,7 @@
 			<input class="button" type="button" value="12 weeks" onClick="setWeeks(12)" />
 			<input class="button" type="button" value="3 months" onClick="setMonths(3)" />
 			<p>Specific days/weeks/months until expiration:</p>
-			<input class="button" id="dataVal" type="number" placeholder="45">
+			<input class="button" id="dataVal" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="45">
 			<input class="button" type="button" value="days" onClick="setDays(parseInt(document.getElementById('dataVal').value))" />
 			<input class="button" type="button" value="weeks" onClick="setWeeks(parseInt(document.getElementById('dataVal').value))" />
 			<input class="button" type="button" value="months" onClick="setMonths(parseInt(document.getElementById('dataVal').value))" />
