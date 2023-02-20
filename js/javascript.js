@@ -18,82 +18,82 @@ function myFunction() {
     }
   }
 }
-var todayDate = new Date();
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-function setCurrentDate(daysNum) {
-  todayDateCalc = daysAdd(daysNum, todayDate);
-  document.getElementById("startDate").value = todayDateCalc.toISOString().slice(0, 10);
-}
+var todayDate = new Date();
+
 
 // date maths
 function daysAdd(daysNum, fromDate) {
   var startDate = new Date(fromDate);
   var newDate = new Date(fromDate);
-  newDate.setDate(startDate.getDate() + daysNum - 1);
+  newDate.setDate(startDate.getDate() + daysNum);
   return newDate;
 }
 
 function monthsAdd(monthsNum, fromDate) {
   var startDate = new Date(fromDate);
-  var newDate = new Date(startDate.getFullYear(), startDate.getMonth() + monthsNum, startDate.getDate() -1);
+  var newDate = new Date(startDate.getFullYear(), startDate.getMonth() + monthsNum, startDate.getDate());
   return newDate;
 }
 
-function setDays(daysNum) {
-  var startDate = document.getElementById("startDate").value;
-  var startYear = startDate.slice(0, 4);
-  var startMonth = startDate.slice(5, 7);
-  var startDay = startDate.slice(8, 10);
-  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
-  var newDate = daysAdd(daysNum, startDate);
-  //gets the weekday e.g. Mon, Tue
-  let weekDay = weekday[newDate.getDay()];
-  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
-  var theDayMonth = newDate.toISOString().slice(5, 10);
-  //gets the month from theDayMonth variable
-  var theDay = theDayMonth.slice(3);
-  //gets the day from theDayMonth variable
-  var theMonth = theDayMonth.slice(0, 2);
-  //gets the year
-  var theYear = newDate.toISOString().slice(0, 4);
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " " + " Days from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
+function setTodayDate() {
+  document.getElementById("startDate").value = todayDate.toISOString().slice(0, 10);
 }
 
-function setWeeks(daysNum) {
-  var startDate = document.getElementById("startDate").value;
-  var startYear = startDate.slice(0, 4);
-  var startMonth = startDate.slice(5, 7);
-  var startDay = startDate.slice(8, 10);
-  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
-  var newDate = daysAdd(daysNum * 7, startDate);
-  let weekDay = weekday[newDate.getDay()];
-  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
-  var theDayMonth = newDate.toISOString().slice(5, 10);
-  //gets the month from theDayMonth variable
-  var theDay = theDayMonth.slice(3);
-  //gets the day from theDayMonth variable
-  var theMonth = theDayMonth.slice(0, 2);
-  //gets the year
-  var theYear = newDate.toISOString().slice(0, 4);
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " Weeks from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
+function setTomorrowDate() {
+  var tomorrowDate = daysAdd(1, todayDate);
+  document.getElementById("startDate").value = tomorrowDate.toISOString().slice(0, 10);
 }
 
 function setMonths(daysNum) {
   var startDate = document.getElementById("startDate").value;
-  var startYear = startDate.slice(0, 4);
-  var startMonth = startDate.slice(5, 7);
-  var startDay = startDate.slice(8, 10);
-  var startDate1 = (startDay + "/" + startMonth + "/" + startYear);
   var newDate = monthsAdd(daysNum, startDate);
-  let weekDay = weekday[newDate.getDay()];
-  //gets the day and month e.g. 30/01/2022 this gets 30/01 except its formatted in U.S. time so 01/30
-  var theDayMonth = newDate.toISOString().slice(5, 10);
-  //gets the month from theDayMonth variable
-  var theDay = theDayMonth.slice(3);
-  //gets the day from theDayMonth variable
-  var theMonth = theDayMonth.slice(0, 2);
-  //gets the year
-  var theYear = newDate.toISOString().slice(0, 4);
-  document.getElementById("result").innerHTML += "<p>" + daysNum + " Months from " + startDate1 + " is " + "<br><h2>" + weekDay + "<br>" + theDay + "/" + theMonth + "/" + theYear + "</h2>";
+  var newDate = newDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Months from " + startDate + " is " + "<br><h2>" + newDate + "</h2>";
 }
+
+function setWeeks(daysNum) {
+  var startDate = document.getElementById("startDate").value;
+  var newDate = daysAdd(daysNum * 7, startDate);
+  var newDate = newDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Weeks from " + startDate + " is " + "<br><h2>"  + newDate + "</h2>";
+}
+
+function setDays(daysNum) {
+  var startDate1 = document.getElementById("startDate").value;
+  var newDate = daysAdd(daysNum - 1, startDate1);
+  var newDate = newDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
+}
+// Add days num from input
+function setFreeDays() {
+  var startDate = new Date(document.getElementById("startDate").value);
+  var startDate1 = startDate.toISOString().slice(0, 10);
+  var daysNum = parseInt(document.getElementById("dataVal").value);
+  var newDate = daysAdd(daysNum - 1, startDate);
+  var newDate = newDate.toDateString();
+  var startDate = startDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Days from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
+}
+// Add weeks num from input
+function setFreeWeeks() {
+  var startDate = new Date(document.getElementById("startDate").value);
+  var startDate1 = startDate.toISOString().slice(0, 10);
+  var daysNum = parseInt(document.getElementById("dataVal").value);
+  var newDate = daysAdd(daysNum * 7, startDate);
+  var newDate = newDate.toDateString();
+  var startDate = startDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Weeks from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
+}
+// Add months num from input
+function setFreeMonths() {
+  var startDate = new Date(document.getElementById("startDate").value);
+  var startDate1 = startDate.toISOString().slice(0, 10);
+  var daysNum = parseInt(document.getElementById("dataVal").value);
+  var newDate = monthsAdd(daysNum, startDate);
+  var newDate = newDate.toDateString();
+  var startDate = startDate.toDateString();
+  document.getElementById("result").innerHTML += "<p>" + daysNum + " Months from " + startDate1 + " is " + "<br><h2>" + newDate + "</h2>";
+}
+
+$('p').html($('p').html().replace(/\|/g, ''));

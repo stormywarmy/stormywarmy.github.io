@@ -1,18 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&amp;display=swap');
 @charset "utf-8";
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-      color: black;
-      margin: 10px;
-      padding: 5px;
-      background-image: url("../images/pattern.jpg");
-      background-size: contain;
-    }
-}
 
 body {
   color: black;
@@ -57,8 +45,6 @@ div {
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   padding: 10px;
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
@@ -90,12 +76,44 @@ a.byStormy {
   font-size: 1.3em;
 }
 
+.switch {
+  align-self: flex-end;
+}
+
+.inner-switch {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 1.25rem;
+  width: 3.125rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
+}
+
+#myInput {
+  width: 70vw;
+  /* Full-width */
+  font-size: 16px;
+  /* Increase font-size */
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  /* Add some padding */
+  border: 1px solid #ddd;
+  /* Add a grey border */
+  margin-bottom: 16px;
+  /* Add some space below the input */
+}
+
 #myTable {
   border-collapse: collapse;
   /* Collapse borders */
-  width: 95%;
+  width: 100%;
   /* Full-width */
-  font-size: 16px;
+  font-size: 18px;
   /* Increase font-size */
 }
 
@@ -141,26 +159,42 @@ a.byStormy {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.alert {
-  padding: 20px;
-  background-color: #2196F3;
-  color: white;
-  opacity: 1;
-  transition: opacity 0.6s;
-  margin-bottom: 15px;
+/* Container holding the image and the text */
+.container {
+  background-image: url(../images/monday.png);
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  height: fit-content;
+  background-size: contain;
+  width: 51%;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 1em;
+  max-width: 300px;
 }
 
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
+/* Centered text day */
+.centered {
+  font-family: 'Comfortaa', cursive;
+  font-size: 4.5em;
   color: black;
+  transform: translate(0%, 15%);
+  margin-bottom: -10px;
 }
+
+/* Centered text month */
+.centered1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: -60px;
+  padding-top: 5%;
+}
+
+/* Centered text year */
+.centered2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5em;
+  color: black;
+  padding-top: 6%;
+} 
